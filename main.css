@@ -56,3 +56,15 @@ body {
 .female-button:hover{
     background-color: rgb(238, 219, 255);
 }
+
+.weight-input{
+    text-align: center;
+    position: relative;
+    
+}
+
+.weight-input input{
+    padding: 1rem;
+    font-size: 20px;
+    width: 20rem;
+}
