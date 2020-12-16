@@ -118,3 +118,21 @@ body {
     width: 20rem;
 }
 
+.submit-button input{
+    position: relative;
+    top: 5rem;
+    padding: 1rem;
+    width: 15rem;
+    left: 7.5rem;
+    
+}
+
+.result-container{
+    position: relative;
+    top: 6rem;
+    left: 7.3rem;
+    border-style: solid;
+    border-width: 1px;
+    height: 4rem;
+    width: 15rem;
+}
