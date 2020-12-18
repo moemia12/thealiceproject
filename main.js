@@ -20,7 +20,7 @@ submitButton.addEventListener('click', function(){                   // User cli
     document.getElementById("result-container").innerHTML = 
     bloodAlcoholContent.toFixed(2);
     
-     
+    encodeURI
     
 })
 
