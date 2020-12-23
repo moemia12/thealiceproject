@@ -9,34 +9,38 @@
 <body>
     
     <main>
-
+        <div class="overlay-background"></div>
         <div class="main-container">
             <div class="viewport">
                 <div class="gender-buttons" id="gender-buttons">
-                    <div class="male-button">MALE</div>
-                    <div class="female-button">FEMALE</div>
+                    <button class="male-button">MALE</button>
+                    <button class="female-button">FEMALE</button>
                 </div>
                 <div class="weight-input" >
                     <h3>ENTER WEIGHT</h3>
                     <input id="weight-input" type="number" placeholder="75kg" required>
                 </div>
                 <div class="alcohol-content" >
-                    <h3>I'VE HAD</h3>
+                    <h3>AMOUNT OF DRINKS</h3>
                     <input id="alcohol-content" type="number" placeholder="5" required>
                 </div>
                 <div class="alcohol-type">
-                    <h3>OF</h3>
+                    <h3>TYPE OF DRINKS</h3>
                     <select name="type-of-alcohol" id="alcohol-type">
-                        <option value="1.5">Shots of Spirits</option>
-                        <option value="5">Glasses of Wine</option>
-                        <option value="12">Pints of Beer</option>
+                        <option value="1">Shots of Spirits</option>
+                        <option value="1">Glasses of Wine</option>
+                        <option value="1">Pints of Beer</option>
                     </select>
+                </div>
+                <div class="elapsed-time">
+                    <h3>ELAPSED TIME</h3>
+                    <input id = "elapsed-time" type="number" placeholder="2 hours ago" required>
                 </div>
                 <div class="submit-button" >
                     <input type="submit" id="submit-button">
                 </div>
                 <div class="result-container" id="result-container">
-                    
+                    <h5>YOUR BAC IS</h5>
                 </div>
             </div>
         </div>
