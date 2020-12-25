@@ -10,52 +10,22 @@ const genderButtonElement = document.querySelector('input[name="tools"]:checked'
 
 //Function to calculate BAC 
 
-genderButtonElement.addEventListener('click', function(){
 
-    const maleButton = document.getElementById("tool-1");
-    const femaleButton = document.getElementById("tool-2");
 
-    if(maleButton.checked === true){
+submitButton.addEventListener('click', function(){                   // User clicks Submit button will start the calculation
+    const weight = parseInt(weightElement.value);                    // Weight will be the integer value of the weightElement input
+    const amount = parseInt(amountElement.value);                    // Amount will be the integer value of amountElement input 
+    const alcoholType = parseFloat(alcoholTypeElement.value);        // AlcoholType will be the float value of alcoholTypeElement
+    const gramsOfAlcohol = (alcoholType*amount)*14;                  // 14 is the standard multipler for US/UK for grams of alcohol/ per standard unit
+    const genderButton = parseFloat(genderButtonElement.value);
+    const bloodAlcoholContent = (gramsOfAlcohol / ((weight * 1000) * genderButton))*100;
+    const elapsedTime = parseInt(elapsedTimeElement.value) * 0.015;
+    const finalBac = bloodAlcoholContent - elapsedTime;
     
-        submitButton.addEventListener('click', function(){                   // User clicks Submit button will start the calculation
-            const weight = parseInt(weightElement.value);                    // Weight will be the integer value of the weightElement input
-            const amount = parseInt(amountElement.value);                    // Amount will be the integer value of amountElement input 
-            const alcoholType = parseFloat(alcoholTypeElement.value);        // AlcoholType will be the float value of alcoholTypeElement
-            const gramsOfAlcohol = (alcoholType*amount)*14;                  // 14 is the standard multipler for US/UK for grams of alcohol/ per standard unit
-            const genderButton = 0.55;
-            const bloodAlcoholContent = (gramsOfAlcohol / ((weight * 1000) * genderButton))*100;
-            const elapsedTime = parseInt(elapsedTimeElement.value) * 0.015;
-            const finalBac = bloodAlcoholContent - elapsedTime;
-            
-            
-            document.getElementById("result-container").innerHTML = 
-            finalBac.toFixed(2) + " " + "BAC";
-            
-        })
-
-    } else if(femaleButton.checked === true){
     
-        submitButton.addEventListener('click', function(){                   // User clicks Submit button will start the calculation
-            const weight = parseInt(weightElement.value);                    // Weight will be the integer value of the weightElement input
-            const amount = parseInt(amountElement.value);                    // Amount will be the integer value of amountElement input 
-            const alcoholType = parseFloat(alcoholTypeElement.value);        // AlcoholType will be the float value of alcoholTypeElement
-            const gramsOfAlcohol = (alcoholType*amount)*14;                  // 14 is the standard multipler for US/UK for grams of alcohol/ per standard unit
-            const genderButton = 0.68;
-            const bloodAlcoholContent = (gramsOfAlcohol / ((weight * 1000) * genderButton))*100;
-            const elapsedTime = parseInt(elapsedTimeElement.value) * 0.015;
-            const finalBac = bloodAlcoholContent - elapsedTime;
-            
-            
-            document.getElementById("result-container").innerHTML = 
-            finalBac.toFixed(2) + " " + "BAC";
-            
-        })
-
-    }
-
+    document.getElementById("result-container").innerHTML = 
+    finalBac.toFixed(2) + " " + "BAC";
+    
+    
 })
-
-
-
-
 
