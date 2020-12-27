@@ -21,11 +21,15 @@ submitButton.addEventListener('click', function(){                   // User cli
     const bloodAlcoholContent = (gramsOfAlcohol / ((weight * 1000) * genderButton))*100;
     const elapsedTime = parseInt(elapsedTimeElement.value) * 0.015;
     const finalBac = bloodAlcoholContent - elapsedTime;
+
+    const timeTillSober = finalBac/0.015;
     
     
     document.getElementById("result-container").innerHTML = 
     finalBac.toFixed(2) + " " + "BAC";
     
-    
+    document.getElementById("sober-clock").innerHTML = 
+    timeTillSober.toFixed(2) + " " + "Hours Till Sober";
 })
+
 
